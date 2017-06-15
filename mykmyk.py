@@ -337,8 +337,7 @@ def główny():
 def graj(frazy):
     ''' Losujemy od niechcenia. '''
 
-    wielkość = len(frazy)
-    elemencik = loteriada(0, wielkość)
+    elemencik = loteriada(0, len(frazy)-1)
 
     return frazy[elemencik]
 
