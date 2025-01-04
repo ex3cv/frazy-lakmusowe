@@ -326,18 +326,25 @@ FRAZY_PART_ЧЕТВЕРТЫЙ = [
 
 def główny():
     ''' Takie, takie, na szybkości. '''
+def główny() -> None:
+    """Takie, takie, na szybkości."""
 
     print(
         graj(FRAZY_PART_ONE) + ' ' + graj(FRAZY_PART_DWA) + ' ' + graj(
             FRAZY_PART_3) + ' ' + graj(FRAZY_PART_ЧЕТВЕРТЫЙ))
+        f"{graj(FRAZY_PART_ONE)} {graj(FRAZY_PART_DWA)} {graj(FRAZY_PART_3)} {graj(FRAZY_PART_ЧЕТВЕРТЫЙ)}"
+    )
 
     return 0
 
+def graj(frazy: list[str]) -> str:
+    """Losujemy od niechcenia."""
 
 def graj(frazy):
     ''' Losujemy od niechcenia. '''
 
     elemencik = loteriada(0, len(frazy)-1)
+    elemencik = loteriada(0, len(frazy) - 1)
 
     return frazy[elemencik]
 
